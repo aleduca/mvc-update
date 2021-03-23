@@ -1,0 +1,15 @@
+{
+    "name": "alexandreeduardocardoso/mvc",
+    "authors": [
+        {
+            "name": "Alexandre Cardoso",
+            "email": "alecar2007@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload":{
+        "psr-4":{
+            "app\\":"app"
+        }
+    }
+}
