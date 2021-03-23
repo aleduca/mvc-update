@@ -4,18 +4,21 @@ namespace app\core;
 
 use app\interfaces\ControllerInterface;
 
-class ControllerExtract
+class ControllerExtract implements ControllerInterface
 {
     private string $controller = 'Home';
     private string $method = 'index';
     private array $params = [];
     private array $uri;
     private int $sliceIndexStartFrom = 2;
+
+    public function __construct()
+    {
+        $this->uri = explode('/', ltrim($_SERVER['REQUEST_URI'], '/'));
+    }
     
     public function controller():string
     {
-        $this->uri = explode('/', ltrim($_SERVER['REQUEST_URI'], '/'));
-        
         if (isset($this->uri[0]) and $this->uri[0] !== '') {
             $this->controller = ucfirst($this->uri[0]);
         }

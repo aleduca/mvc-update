@@ -10,6 +10,6 @@
 <body>
     <h2>Curso de MVC</h2>
 
-    <?php require $controller->view; ?>
+    <?php require $this->controller->view; ?>
 </body>
 </html>
