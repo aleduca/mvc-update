@@ -1,12 +1,14 @@
 <?php
 
+session_start();
+
 require '../vendor/autoload.php';
 
-use app\core\ControllerExtract;
 use app\core\MyApp;
+use app\core\AppExtract;
 
 try {
-    $myApp = new MyApp(new ControllerExtract());
+    $myApp = new MyApp(new AppExtract());
     $myApp->controller();
     $myApp->view();
 } catch (\Throwable $th) {

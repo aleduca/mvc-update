@@ -1,5 +1,6 @@
 {
     "name": "alexandreeduardocardoso/mvc",
+    "description": "MVC",
     "authors": [
         {
             "name": "Alexandre Cardoso",
@@ -10,6 +11,12 @@
     "autoload":{
         "psr-4":{
             "app\\":"app"
-        }
+        },
+        "files":[
+            "app/helpers/exception.php",
+            "app/helpers/redirect.php",
+            "app/helpers/messages.php",
+            "app/helpers/session.php"
+        ]
     }
 }
